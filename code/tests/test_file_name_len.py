@@ -31,7 +31,7 @@ def evaluate_folder(max_file_length, dirpath):
 
             if path.suffix in [".xz", ".csv"]:
                 full_path = path.name
-                is_valid = (max_file_length - full_path) >= 0
+                is_valid = (max_file_length - len(full_path)) >= 0
                 if is_valid:
                     report += "\t<p>[VALID] %s</p>\n" % (full_path)
                 else:
